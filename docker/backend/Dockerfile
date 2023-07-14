@@ -3,7 +3,9 @@ FROM node:20-slim
 RUN apt-get update -y && apt-get upgrade -y && apt-get install -y vim
 
 RUN npm install -g npm \
-         nodemon
+				express \
+				nodemon
+
 COPY ./backend /app/backend
 
 WORKDIR /app/backend
